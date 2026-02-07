@@ -502,51 +502,6 @@
             font-size: 0.95rem;
         }
 
-        /* Location – Mobile */
-        .location {
-            padding: 2.5rem 1rem;
-            background: var(--white);
-        }
-
-        .location-content {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .location-info h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--black);
-        }
-
-        .location-details {
-            background: var(--gray-100);
-            padding: 1.25rem;
-            border-radius: 12px;
-            margin-bottom: 1rem;
-        }
-
-        .location-details p {
-            margin: 0.4rem 0;
-            font-size: 1rem;
-            color: var(--gray-800);
-        }
-
-        .map-placeholder {
-            width: 100%;
-            height: 240px;
-            background: var(--gray-100);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2.5rem;
-            color: var(--gray-400);
-        }
-
         /* FAQ – Mobile */
         .faq {
             padding: 2.5rem 1rem;
@@ -883,11 +838,6 @@
             .event-image { height: 180px; font-size: 3.5rem; }
             .event-content { padding: 1.75rem; }
 
-            .location { padding: 4rem 2rem; }
-            .location-content { grid-template-columns: 1fr 1fr; gap: 2rem; }
-            .location-info h3 { font-size: 1.75rem; }
-            .map-placeholder { height: 320px; font-size: 3rem; }
-
             .faq { padding: 4rem 2rem; }
             .faq-question { padding: 1.25rem 1.5rem; font-size: 1.05rem; }
             .faq-answer { padding: 0 1.5rem 1.25rem; }
@@ -938,12 +888,6 @@
             .event-image { height: 200px; font-size: 4rem; }
             .event-content h3 { font-size: 1.5rem; }
 
-            .location { padding: 5rem 2rem; }
-            .location-content { gap: 3rem; }
-            .location-info h3 { font-size: 2rem; }
-            .location-details { padding: 2rem; }
-            .map-placeholder { height: 380px; border-radius: 15px; }
-
             .faq { padding: 5rem 2rem; }
             .faq-question { padding: 1.5rem 2rem; font-size: 1.1rem; }
             .faq-answer { padding: 0 2rem 1.5rem 2rem; }
@@ -972,7 +916,7 @@
             <div class="logo-container">
                 <a href="#" class="logo-link" aria-label="Nach oben scrollen">
                     <div class="logo-circle">
-                        <img src="Logo.png" alt="Verleih Voss" class="logo-img">
+                        <img src="logo.png" alt="Verleih Voss" class="logo-img">
                     </div>
                 </a>
                 <span class="brand-name">Verleih Voss</span>
@@ -1250,28 +1194,6 @@
         </div>
     </section>
 
-    <!-- Location -->
-    <section class="location">
-        <div class="container">
-            <div class="location-content">
-                <div class="location-info">
-                    <h3>📍 Abholung in Holthausen</h3>
-                    <div class="location-details">
-                        <p><strong>Adresse:</strong></p>
-                        <p>Langer Esch 12</p>
-                        <p>49808 Lingen (Ems) - Holthausen</p>
-                    </div>
-                    <p><strong>Lokale Nähe, persönlicher Service:</strong></p>
-                    <p>Du holst den Grill direkt bei mir ab – kurze Wege, persönlicher Kontakt und schnelle Kommunikation. So wie es im Emsland sein sollte!</p>
-                    <a href="tel:01608318235" class="btn btn-primary" style="margin-top: 1.5rem;">Jetzt Termin vereinbaren</a>
-                </div>
-                <div class="map-placeholder">
-                    🗺️
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- FAQ -->
     <section class="faq">
         <div class="container">
@@ -1371,7 +1293,7 @@
         <div class="footer-logo">
             <a href="#" class="logo-link" style="margin: 0 auto;">
                 <div class="logo-circle">
-                    <img src="Logo.png" alt="Verleih Voss" class="logo-img">
+                    <img src="logo.png" alt="Verleih Voss" class="logo-img">
                 </div>
             </a>
         </div>
