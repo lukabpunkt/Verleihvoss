@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="theme-color" content="#0a0a0a">
+    <meta name="theme-color" content="#080808">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=yes">
     <meta name="description" content="Professionellen Gyrosgrill mieten in Lingen-Holthausen ✓ Ab 40€/Tag ✓ Perfekt für Events ✓ Inkl. Beratung ✓ Tel: 01608318235">
@@ -19,7 +19,13 @@
 
         :root {
             --black: #0a0a0a;
-            --black-soft: #1a1a1a;
+            --black-soft: #151515;
+            --black-deep: #050505;
+            --black-mid: #0d0d0d;
+            --black-gradient-hero: linear-gradient(135deg, #030303 0%, #080808 35%, #0d0d0d 65%, #141414 100%);
+            --black-gradient-section: linear-gradient(135deg, #040404 0%, #090909 40%, #111111 100%);
+            --black-gradient-footer: linear-gradient(135deg, #050505 0%, #0a0a0a 50%, #121212 100%);
+            --gloss-overlay: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.04) 30%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.03) 70%, transparent 100%);
             --white: #ffffff;
             --gray-100: #f5f5f5;
             --gray-200: #e5e5e5;
@@ -150,17 +156,30 @@
         }
 
         .btn-secondary:hover {
-            background: var(--black);
+            background: linear-gradient(135deg, #080808 0%, #141414 100%);
             color: var(--white);
+            border-color: #141414;
         }
 
         /* Hero – Mobile */
         .hero {
-            background: var(--black);
+            background: var(--black-gradient-hero);
             color: var(--white);
             padding: 2.5rem 1rem 3rem;
             text-align: center;
             position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gloss-overlay);
+            pointer-events: none;
         }
 
         .hero-content {
@@ -186,13 +205,13 @@
             font-size: 1.85rem;
             margin-bottom: 1rem;
             color: var(--white);
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4), 0 1px 2px rgba(0, 0, 0, 0.2);
         }
 
         .hero-subtitle {
             font-size: 1rem;
             margin-bottom: 1.5rem;
-            color: var(--gray-200);
+            color: rgba(255, 255, 255, 0.88);
             line-height: 1.5;
         }
 
@@ -220,7 +239,7 @@
             align-items: center;
             gap: 0.4rem;
             font-size: 0.9rem;
-            color: var(--gray-200);
+            color: rgba(255, 255, 255, 0.8);
         }
 
         .trust-icon {
@@ -561,8 +580,35 @@
         /* Contact */
         .contact {
             padding: 2.5rem 1rem;
-            background: var(--black);
+            background: var(--black-gradient-section);
             color: var(--white);
+            position: relative;
+        }
+
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+        }
+
+        .contact::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gloss-overlay);
+            pointer-events: none;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
         }
 
         .contact-content h2 {
@@ -572,7 +618,7 @@
         }
 
         .contact-content p {
-            color: var(--gray-200);
+            color: rgba(255, 255, 255, 0.85);
         }
 
         .contact-methods {
@@ -583,10 +629,11 @@
         }
 
         .contact-method {
-            background: var(--gray-800);
+            background: rgba(255, 255, 255, 0.04);
             padding: 1.5rem;
             border-radius: 12px;
-            border: 1px solid var(--gray-600);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(8px);
         }
 
         .contact-method-icon {
@@ -612,11 +659,40 @@
 
         /* Footer */
         .footer {
-            background: var(--black);
+            background: var(--black-gradient-footer);
             color: var(--white);
             padding: 2rem 1rem 1.5rem;
             padding-bottom: calc(2rem + env(safe-area-inset-bottom));
             text-align: center;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.06), transparent);
+        }
+
+        .footer::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--gloss-overlay);
+            pointer-events: none;
+        }
+
+        .footer-logo,
+        .footer-links,
+        .copyright {
+            position: relative;
+            z-index: 1;
         }
 
         .footer-logo {
@@ -632,7 +708,7 @@
         }
 
         .footer-links a {
-            color: var(--white);
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             transition: color 0.25s ease;
         }
@@ -642,9 +718,9 @@
         }
 
         .copyright {
-            color: var(--gray-400);
+            color: rgba(255, 255, 255, 0.5);
             padding-top: 1.5rem;
-            border-top: 1px solid var(--gray-800);
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
             font-size: 0.9rem;
         }
 
